@@ -64,9 +64,9 @@ export const personalInfo = {
   email: 'arunkannanak2007@gmail.com',
   phone: '+91 8667424501',
   phoneRaw: '+918667424501',
-  resumeUrl: '/resume.pdf',
-  photoUrl: '/arun.jpg',
-  avatarUrl: '/arun-avatar.jpg',
+  resumeUrl: './resume.pdf',
+  photoUrl: './arun.jpg',
+  avatarUrl: './arun-avatar.jpg',
   status: 'Open to Software Engineering Opportunities',
 };
 

@@ -19,15 +19,16 @@ const typeColors = {
 export default function Achievements() {
   return (
     <section id="achievements" className="py-24 lg:py-32 relative">
-      <div className="section-container">
+      <div className="section-container relative z-10">
         <SectionHeading
+          tag="Milestones"
           title="Achievements & Certifications"
           subtitle="Honors, leadership roles, and verified professional credentials"
         />
 
         {/* 1. Honors & Leadership */}
         <div className="mb-16">
-          <h3 className="text-sm font-semibold uppercase tracking-[0.2em] text-accent-indigo mb-6 text-center">
+          <h3 className="text-sm font-semibold uppercase tracking-[0.2em] text-accent-indigo mb-6 text-center font-mono">
             Honors & Leadership
           </h3>
           <div className="grid sm:grid-cols-2 gap-6 max-w-4xl mx-auto">
@@ -63,7 +64,7 @@ export default function Achievements() {
         {/* 2. Verified Certifications */}
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-8">
-            <h3 className="text-sm font-semibold uppercase tracking-[0.2em] text-accent-violet mb-2">
+            <h3 className="text-sm font-semibold uppercase tracking-[0.2em] text-accent-cyan mb-2 font-mono">
               Verified Certifications
             </h3>
             <p className="text-xs text-slate-400">
@@ -74,7 +75,7 @@ export default function Achievements() {
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {certifications.map((cert, index) => (
               <ScrollReveal key={cert.id} delay={index * 0.05}>
-                <div className="p-4 rounded-xl bg-white/[0.03] border border-white/[0.08] hover:bg-white/[0.06] hover:border-accent-violet/30 transition-all duration-300 flex items-start gap-3">
+                <div className="p-4 rounded-xl bg-white/[0.03] border border-white/[0.08] hover:bg-white/[0.06] hover:border-accent-cyan/35 transition-all duration-300 flex items-start gap-3">
                   <div className="p-2 rounded-lg bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 flex-shrink-0 mt-0.5">
                     <CheckCircle2 size={16} />
                   </div>
@@ -87,7 +88,7 @@ export default function Achievements() {
                         {cert.issuer}
                       </span>
                       {cert.badge && (
-                        <span className="text-[10px] px-2 py-0.5 rounded bg-accent-violet/10 text-accent-violet border border-accent-violet/20 font-mono">
+                        <span className="text-[10px] px-2 py-0.5 rounded bg-accent-violet/15 text-accent-violet border border-accent-violet/25 font-mono">
                           {cert.badge}
                         </span>
                       )}

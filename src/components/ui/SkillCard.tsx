@@ -90,15 +90,18 @@ export default function SkillCard({ name, index }: SkillCardProps) {
       initial={{ opacity: 0, y: 15 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
-      transition={{ duration: 0.25, delay: Math.min(index * 0.03, 0.3) }}
-      whileHover={{ y: -2, transition: { duration: 0.15 } }}
-      className="flex items-center gap-3 px-3.5 py-2.5 rounded-xl bg-white/[0.03] border border-white/[0.08]
-        hover:bg-white/[0.06] hover:border-accent-indigo/30 transition-all duration-300 group"
+      transition={{ duration: 0.35, delay: Math.min(index * 0.035, 0.35), ease: [0.21, 0.47, 0.32, 0.98] }}
+      whileHover={{ y: -3, transition: { duration: 0.2 } }}
+      className="group relative flex items-center gap-3 px-3.5 py-3 rounded-xl bg-white/[0.03] border border-white/[0.08]
+        hover:bg-white/[0.06] hover:border-accent-indigo/40 hover:shadow-lg hover:shadow-accent-indigo/10 transition-all duration-300"
     >
-      <div className="p-2 rounded-lg bg-accent-indigo/10 text-accent-indigo group-hover:bg-accent-indigo/20 transition-colors duration-300 flex-shrink-0">
+      {/* Icon with glowing hover effect */}
+      <div className="p-2 rounded-lg bg-accent-indigo/10 text-accent-indigo border border-accent-indigo/15 group-hover:bg-accent-indigo/25 group-hover:text-accent-cyan group-hover:border-accent-cyan/30 group-hover:shadow-sm group-hover:shadow-accent-indigo/30 transition-all duration-300 flex-shrink-0">
         <Icon size={16} />
       </div>
-      <span className="text-xs sm:text-sm font-medium text-slate-300 group-hover:text-white transition-colors duration-300 truncate">
+
+      {/* Label */}
+      <span className="text-xs sm:text-sm font-medium text-slate-300 group-hover:text-white transition-colors duration-200 truncate">
         {name}
       </span>
     </motion.div>

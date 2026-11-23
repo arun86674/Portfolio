@@ -7,8 +7,9 @@ import { educationList } from '../../data/portfolio';
 export default function Education() {
   return (
     <section id="education" className="py-24 lg:py-32 relative">
-      <div className="section-container">
+      <div className="section-container relative z-10">
         <SectionHeading
+          tag="Academics"
           title="Education"
           subtitle="Academic credentials and foundational milestones"
         />
@@ -21,7 +22,7 @@ export default function Education() {
                 <GlassCard padding="p-7 sm:p-8" hover={true} className="h-full flex flex-col justify-between">
                   <div>
                     <div className="flex items-start justify-between gap-3 mb-4">
-                      <div className="p-3 rounded-2xl bg-accent-indigo/10 text-accent-indigo flex-shrink-0">
+                      <div className="p-3 rounded-2xl bg-accent-indigo/10 text-accent-indigo border border-accent-indigo/20 flex-shrink-0">
                         <Icon size={26} />
                       </div>
                       <span className="text-xs text-slate-400 font-mono px-3 py-1 rounded-full bg-white/[0.04] border border-white/[0.08] flex items-center gap-1.5">
@@ -33,7 +34,7 @@ export default function Education() {
                     <h3 className="text-xl font-bold text-white mb-1.5">
                       {edu.institution}
                     </h3>
-                    <p className="text-accent-indigo font-medium text-sm mb-4">
+                    <p className="text-accent-cyan font-medium text-sm mb-4">
                       {edu.degree}
                     </p>
                   </div>
